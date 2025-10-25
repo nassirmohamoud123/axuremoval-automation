@@ -1,0 +1,54 @@
+# axuremoval-automation
+AI-powered automation system for removal and clearance businesses — integrates n8n, Firebase, and Puppeteer for lead management and posting.
+# 🚛 AxuRemoval Automation System
+
+AI-powered automation platform built for local **removal and clearance businesses** — fully integrated with **n8n**, **Firebase**, and **Puppeteer** to streamline lead handling, ad posting, and customer communication.
+
+---
+
+## ⚙️ Features
+
+### 🔹 1. QuoteForm Automation (Firebase)
+- Connected directly to your React landing page quote form.
+- Automatically:
+  - Sends **instant email confirmation** to the customer.
+  - Notifies **you** and your **driver** when a new job arrives.
+  - Stores all quote data securely in **Firestore** under `/quotes`.
+- Uses Firebase SDK and Firestore triggers to ensure reliability and speed.
+
+---
+
+### 🔹 2. Facebook Auto Poster
+- Automatically opens your Facebook login page (headless Puppeteer mode).
+- Logs in manually once, then reuses the session.
+- Posts your **AI-generated removal ad** text and image directly into your chosen groups.
+- Currently set for:
+  - **Group:** `Everything Watford`
+  - **Message:** Pulled dynamically from AI Text Formatter node in n8n
+- Controlled through the `axuPoster.js` file.
+
+---
+
+### 🔹 3. Gumtree Manual/Assisted Poster
+- Semi-automated (manual login) flow for Gumtree.
+- After Facebook finishes, the automation opens **Gumtree** in a new window for you.
+- Prefills category, title, and message text for faster posting.
+- Sends you a **Gmail reminder** containing:
+  - The formatted ad text
+  - Quick-access links to “Post on Gumtree” and “Post on Facebook”
+- Controlled through the `gumtreePoster.js` file.
+
+---
+
+### 🔹 4. Gmail Reminder Workflow (n8n)
+- Runs inside your n8n instance after ad generation.
+- Sends a structured email reminder with both ad links.
+- Example:- Subject: 📩 Post AxuRemoval Ad on Gumtree — Watford
+Body:
+
+Gumtree category + description
+
+Facebook message + post link
+
+Tip: post every 3 days for consistent exposur- Sends a structured email reminder with both ad links.
+- Example:
