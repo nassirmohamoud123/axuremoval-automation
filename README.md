@@ -1,77 +1,73 @@
- HEAD
-# axuremoval
-removal company
+ # 🚚 AxuRemoval Automation System
 
-# Getting Started with Create React App
+AI-powered automation suite for **removal and clearance businesses** — seamlessly integrates **Firebase**, **n8n**, and **Puppeteer** to handle lead management, instant client communication, and automatic ad posting across Facebook & Gumtree.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+## 🌟 Overview
 
-In the project directory, you can run:
+AxuRemoval Automation is a complete lead-generation and workflow automation platform designed to eliminate manual admin for local service businesses.  
+It connects your **quote form**, **email notifications**, and **ad posting** workflows into one fully-automated system.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ⚙️ Key Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 1. 🧾 QuoteForm Automation
+Automatically handles customer quote submissions in real-time.
 
-### `npm test`
+- Sends **instant confirmation emails** to the client.  
+- Sends internal notifications to **you** and your **driver(s)**.  
+- Stores quote data in **Firebase Firestore** for tracking and filtering.  
+- Designed for integration with your `axuremoval.co.uk/quote` form.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+### 2. 🤖 Facebook Auto Poster
+Automates posting your ad to Facebook groups with Puppeteer.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Opens your browser and logs into Facebook automatically.  
+- Posts your pre-configured ad to selected groups.  
+- Keeps browser open for manual review and verification.  
+- Example group: `https://www.facebook.com/groups/1689296104623314`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 3. 📢 Gumtree Ad Automation
+Posts or refreshes your Gumtree ad automatically.
 
-### `npm run eject`
+- Uses Puppeteer to open Gumtree’s ad creation page.  
+- Fills in title, description, and category from `.env` variables.  
+- Perfect for **daily posting or scheduled refreshes**.  
+- Example title: `Man with a Van — Local Removals & House Clearance (Watford)`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 4. ✉️ Gmail Reminder Workflow (via n8n)
+Keeps your operations running even when you’re offline.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Sends automated Gmail reminders to you and drivers when:  
+  - A new lead is received  
+  - A scheduled job is due  
+  - A quote follow-up is pending  
+- Integrated through **n8n Cloud** or self-hosted n8n instance.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🧠 Technology Stack
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+| Component | Purpose |
+|------------|----------|
+| **React + Firebase** | Handles the front-end quote system & Firestore integration |
+| **n8n Automation** | Manages email triggers, lead classification & follow-ups |
+| **Node.js + Puppeteer** | Runs Facebook and Gumtree posting bots |
+| **.env Configuration** | Centralized control of API keys & posting details |
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## ⚙️ Environment Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-~# nasremoval git add readme.md git commit -m first commit git branch -M main
-nasremoval
- 6872f6a (first commit)
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/nassirmohamoud123/axuremoval-automation.git
+   cd axuremoval-automation
